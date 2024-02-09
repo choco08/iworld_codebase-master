@@ -19,6 +19,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+    <!-- Owl Carousel -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css'>
+    <!-- <link rel="stylesheet" href="assets/custom/css/carousel.css"> -->
     <style>
         .about-img{
             object-fit: cover;
@@ -29,6 +34,209 @@
             -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
             filter: grayscale(0%);
         }
+
+        header .item {
+        height: 100vh;
+        position: relative;
+        }
+        header .item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }
+        header .item .cover {
+        padding: 75px 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.6);
+        display: flex;
+        align-items: center;
+        }
+        header .item .cover .header-content {
+        position: relative;
+        padding: 56px;
+        overflow: hidden;
+        }
+        header .header-content {
+            background-color: transparent !important;
+        }
+        header .item .cover .header-content .line {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+        border: 9px solid #fff;
+        -webkit-clip-path: polygon(0 0, 60% 0, 36% 100%, 0 100%);
+        clip-path: polygon(0 0, 60% 0, 36% 100%, 0 100%);
+        }
+        header .item .cover .header-content h2 {
+        font-weight: 300;
+        font-size: 35px;
+        color: #fff;
+        }
+        header .item .cover .header-content h1 {
+        font-size: 56px;
+        font-weight: 600;
+        margin: 5px 0 20px;
+        word-spacing: 3px;
+        color: #fff;
+        }
+        header .item .cover .header-content h4 {
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 36px;
+        color: #fff;
+        }
+        header .owl-item.active h1 {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        animation-name: fadeInDown;
+        animation-delay: 0.3s;
+        }
+        header .owl-item.active h2 {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        animation-name: fadeInDown;
+        animation-delay: 0.3s;
+        }
+        header .owl-item.active h4 {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        animation-name: fadeInUp;
+        animation-delay: 0.3s;
+        }
+        header .owl-item.active .line {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        animation-name: fadeInLeft;
+        animation-delay: 0.3s;
+        }
+        header .owl-nav .owl-prev {
+        position: absolute;
+        left: 15px;
+        top: 43%;
+        opacity: 0;
+        -webkit-transition: all 0.4s ease-out;
+        transition: all 0.4s ease-out;
+        background: rgba(0, 0, 0, 0.5) !important;
+        width: 40px;
+        cursor: pointer;
+        height: 40px;
+        position: absolute;
+        display: block;
+        z-index: 1000;
+        border-radius: 0;
+        }
+        header .owl-nav .owl-prev span {
+        font-size: 1.6875rem;
+        color: #fff;
+        }
+        header .owl-nav .owl-prev:focus {
+        outline: 0;
+        }
+        header .owl-nav .owl-prev:hover {
+        background: #000 !important;
+        }
+        header .owl-nav .owl-next {
+        position: absolute;
+        right: 15px;
+        top: 43%;
+        opacity: 0;
+        -webkit-transition: all 0.4s ease-out;
+        transition: all 0.4s ease-out;
+        background: rgba(0, 0, 0, 0.5) !important;
+        width: 40px;
+        cursor: pointer;
+        height: 40px;
+        position: absolute;
+        display: block;
+        z-index: 1000;
+        border-radius: 0;
+        }
+        header .owl-nav .owl-next span {
+        font-size: 1.6875rem;
+        color: #fff;
+        }
+        header .owl-nav .owl-next:focus {
+        outline: 0;
+        }
+        header .owl-nav .owl-next:hover {
+        background: #000 !important;
+        }
+        header:hover .owl-prev {
+        left: 0px;
+        opacity: 1;
+        }
+        header:hover .owl-next {
+        right: 0px;
+        opacity: 1;
+        }
+
+        /* Unordered List */
+
+        .body-list {
+            /* font-family: 'Gloria Hallelujah', cursive; */
+            font-size: 1.4rem;
+            background: whitesmoke;
+            margin: 0;
+            padding: 1rem 1rem 0 1rem;
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+        }
+
+        .book-list ul {
+            list-style-position: inside;
+            width: 100%;
+            max-width: 100%;
+            background: white;
+            box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.15);
+            padding: 1rem;
+            margin: 0;
+            border-radius: 0.1rem;
+        }
+
+        .book-list li {
+            padding: 0 0 0 1rem;
+            margin-top: 1rem;
+            /* color: blue; */
+        }
+
+        .book-list li:not(:last-child) {
+            border-bottom: 1px solid lightblue;
+        }
+
+        .book-list li:last-child {
+            margin-bottom: 1rem;
+        }
+
+        .book-list ::marker {
+            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' width='14' viewBox='0 0 50 50'%3E%3Cpath d='M46.4 16.2c-2.3-2.3-5.4-3.5-8.4-4.5-.5-.2-1.1-.3-1.6-.5-1.6-1.6-3.7-2.8-6.2-3.2-1-.2-1.9.1-2.5.6-.9-.3-1.8-.6-2.7-.8-3.2-1-6.4-1.8-9.5-.1-1 .5-1.9 1.2-2.7 2-6.4 1.4-11.7 5-12.4 12.7C0 27 1.9 31.5 4.9 34.9c.1.6.2 1.1.4 1.7 1 3.2 3.3 5.7 6.7 6.5 2.7.6 5.4-.2 7.9-1.2 3.3.4 6.7.3 9.9 0 6.5-.7 13.3-2.8 17.1-8.5 3.6-5.2 4-12.6-.5-17.2zm-17.3.9c2.1.4 4 1.7 4.7 3.8 0 .5-.1 1.1-.2 1.6-.3 1.4-.8 2.6-1.6 3.7-.7.2-1.5.1-2.3-.4-.8-.4-1.6-1-2.2-1.6-.4-.4-1.2-1.7-1.6-1.9 3.4 1.3 5.1-3 3.2-5.2zm-11.6 9.7c.2-1.9 1.1-3.9 2.3-5.5-.4 2.1.3 4.2 1.7 6 1.3 1.7 3.1 3.2 5 4.2-.2.1-.4.2-.6.4-.1 0-.1.1-.2.1-3.9.2-8.7-.8-8.2-5.2zm-6.4 3.1c.1.3.1.7.2 1 .2.6.4 1.2.7 1.8-.4-.2-.7-.5-1-.7.1-.8.1-1.4.1-2.1zm31.2-1.3c-.9 1.7-2.1 3.1-3.7 4.1 2-2.1 3.4-4.7 4-7.6.2-.7.3-1.4.3-2.1.6 1.5.5 3.3-.6 5.6z'/%3E%3C/svg%3E") ' ';
+        }
+
+        .book-list li:nth-child(3n)::marker {
+            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' width='14' viewBox='0 0 50 50'%3E%3Cpath d='M46.5 12.5c-.4-1.1-1.3-1.8-2.2-2-4.2-4-11.6-4.3-17.1-4.1-6.9.3-13.9 2.1-19.4 6.5C2 17.5-2.4 25.7 2.5 32.6c2.2 3.2 5.5 4.9 9 5.5 3.3 1.7 6.7 3.3 10.2 4.4 7.8 2.3 17 1.6 23.2-4.3 7.3-7 4.8-17.3 1.6-25.7zm-20.2 2.7c.6 0 1.3 0 1.8.2 1.1.4 1.7 1.3 2 2.3-1-1.2-2.4-2.1-3.8-2.5zm-1.4 6.6c.9.9 1.3 2.2-.2 2.3-2 .2-1.1-1.9.2-2.3zm-11.8 9.8c-.6-.3-2.9-1.1-3.2-1.8-.2-.5 1.4-3.1 2.1-4.2.3.5.7 1 1.2 1.4 0 .3.1.6.2.8.5 1.9 1.5 3.1 2.9 4h-.2c-.8.1-1.6.1-2.5-.1-.2 0-.3 0-.5-.1zM24 36.4c1.6-.7 3-1.5 4.3-2.5.8.2 1.7.3 2.5.5 2.5.4 5.2.9 7.7.6-.9.6-2 1.1-3 1.4-3.9 1.3-7.7 1-11.5 0z'/%3E%3C/svg%3E") ' ';
+        }
+
+        .book-list li:nth-child(3n - 1)::marker {
+            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' width='14' viewBox='0 0 50 50'%3E%3Cpath d='M48.3 23.7c-1-9.9-9.9-15.6-18.8-17.8-8.2-2.1-18.8-2.6-24.6 4.8C.6 16.2 1 23.6 4.3 29.3c-.5 1-.8 2-1 3-.6 4 2 7.6 5.1 10 5.9 4.4 14 4.2 19.6-.4 1.5 0 2.9-.2 4.4-.5 1.8 0 3.5 0 5.3-.1 2.3-.1 3.5-1.9 3.5-3.7 4.5-3.3 7.7-8.2 7.1-13.9zM9.1 17.8c1.1-4.1 4.9-5.8 8.8-6.1.9-.1 1.9-.1 2.9-.1-3.2 1.6-6.3 4.6-8 7.4-.1.1-.1.2-.2.3-1.1.9-2.1 1.9-3 2.9-.2.2-.4.4-.5.6-.4-1.7-.5-3.3 0-5z'/%3E%3C/svg%3E") ' ';
+        }
+
+
     </style>
 </head>
 <body class="overflow-x-hidden">
@@ -64,7 +272,7 @@
     <!--whatsapp widget ending  -->
 
     <!-- Header Beginning -->
-    <div class="header">
+    <div class="header" style="height: auto;">
         <!-- Navbar beginning -->
         <nav class="navbar navbar-expand-lg navbar-light fw-bold">
             <div class="container-fluid">
@@ -102,7 +310,7 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./smb_msp.html">Managed Service Provider (MSP)</a>
+                            <a class="nav-link" href="./smb_msp.html">Managed Service Provider</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./contact.html">Contact Us</a>
@@ -115,9 +323,9 @@
             </div>
         </nav>
         <!-- Ending of navbar -->
-        <div class="header-content">
+        <!-- <div class="header-content"> -->
             <!-- Carousel Beginning -->
-            <div class="carousel-container">
+            <!-- <div class="carousel-container">
                 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-bs-interval="1000">
@@ -137,7 +345,7 @@
                         </div>
                         <div class="carousel-item">
                             <img src="./Assets/img/google.jpg" class="d-block w-100 object-fit-cover img-fluid" alt="...">
-                        </div>
+                        </div>-->
                         <!-- Images for smaller screens -->
                         <!-- <div class="carousel-item d-block d-md-none">
                             <img src="./Assets/img/responsive-home-bg.png" class="d-block w-100 object-fit-cover img-fluid" alt="...">
@@ -145,7 +353,7 @@
                         <div class="carousel-item d-block d-md-none">
                             <img src="./Assets/img/responsive-business-bg.png" class="d-block w-100 object-fit-cover img-fluid" alt="...">
                         </div> -->
-                    </div>
+                    <!--</div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
@@ -155,10 +363,96 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-            </div>
-        </div>
+            </div> -->
+
+        <!-- </div> -->
     </div>
     <!-- End of Header -->
+    
+    <!-- Owl Carousel -->
+    <header>
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <img src="./Assets/img/home_internet.jpg" alt="images not found">
+                <div class="cover">
+                    <div class="container">
+                        <div class="header-content">
+                            <div class="line"></div>
+                            <h2 class="align-center glow-text display-2">Heading</h2>
+                            <h3 class="text-white display-5">Subheading</h3>
+                            <p class="text-white display-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt atque, labore itaque deleniti harum nisi ullam eaque magni corporis illum magnam nemo perspiciatis blanditiis enim necessitatibus voluptas assumenda eligendi? </p>
+                        </div>
+                    </div>
+                </div>
+            </div>                    
+                        
+            <div class="item">
+                <img src="./Assets/img/smb.jpg" alt="images not found">
+                <div class="cover">
+                    <div class="container">
+                        <div class="header-content">
+                            <div class="line animated bounceInLeft"></div>
+                            <h2 class="align-center glow-text display-2">Heading</h2>
+                            <h3 class="text-white display-5">Subheading</h3>
+                            <p class="text-white display-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt atque, labore itaque deleniti harum nisi ullam eaque magni corporis illum magnam nemo perspiciatis blanditiis enim necessitatibus voluptas assumenda eligendi? </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./Assets/img/enterprise.jpg" alt="images not found">
+                <div class="cover">
+                    <div class="container">
+                        <div class="header-content">
+                            <div class="line animated bounceInLeft"></div>
+                            <h2 class="align-center glow-text display-2">Heading</h2>
+                            <h3 class="text-white display-5">Subheading</h3>
+                            <p class="text-white display-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt atque, labore itaque deleniti harum nisi ullam eaque magni corporis illum magnam nemo perspiciatis blanditiis enim necessitatibus voluptas assumenda eligendi? </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./Assets/img/MPLS.jpg" alt="images not found">
+                <div class="cover">
+                    <div class="container">
+                        <div class="header-content">
+                            <div class="line animated bounceInLeft"></div>
+                            <h2 class="align-center glow-text display-2">Heading</h2>
+                            <h3 class="text-white display-5">Subheading</h3>
+                            <p class="text-white display-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt atque, labore itaque deleniti harum nisi ullam eaque magni corporis illum magnam nemo perspiciatis blanditiis enim necessitatibus voluptas assumenda eligendi? </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./Assets/img/MITS.jpg" alt="images not found">
+                <div class="cover">
+                    <div class="container">
+                        <div class="header-content">
+                            <div class="line animated bounceInLeft"></div>
+                            <h2 class="align-center glow-text display-2">Heading</h2>
+                            <h3 class="text-white display-5">Subheading</h3>
+                            <p class="text-white display-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt atque, labore itaque deleniti harum nisi ullam eaque magni corporis illum magnam nemo perspiciatis blanditiis enim necessitatibus voluptas assumenda eligendi? </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./Assets/img/google.jpg" alt="images not found">
+                <div class="cover">
+                    <div class="container">
+                        <div class="header-content">
+                            <div class="line animated bounceInLeft"></div>
+                            <h2 class="align-center glow-text display-2">Heading</h2>
+                            <h3 class="text-white display-5">Subheading</h3>
+                            <p class="text-white display-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt atque, labore itaque deleniti harum nisi ullam eaque magni corporis illum magnam nemo perspiciatis blanditiis enim necessitatibus voluptas assumenda eligendi? </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <!-- Home About us Section -->
     <div class="container header-about mt-5">
@@ -210,6 +504,19 @@
             <div class="service-container container mt-2 text-center">
                 <div class="container">
                     <div class="row">
+
+                        <div class="col services">
+                            <div class="card h-100 service d-flex justify-content-center">
+                                <div class="card-header">
+                                    <h5 class="card-title fw-bold">Home Internet</h5>
+                                </div>
+                              <div class="card-body">
+                                <p class="card-text lato service-text py-2">Our Home Internet plans are premium home internet plan with high-speed, unlimited data, and reliable connectivity, along with additional benefits such as a free first month and 24/7 customer support.</p>
+                              </div>
+                              <div class="card-footer text-center"><a href="./internet_for_home.html" class="text-decoration-none i-green fw-bold">Subscribe >></a> </div>
+                            </div>
+                          </div>
+
                         <div class="col services p-4 mx-2">
                             <div class="service">
                                 <h5 class="service-title fw-bold ">Home Internet</h5>
@@ -281,14 +588,18 @@
             <p>
                 Google Workspace for Education provides schools with seamless, efficient, effective, and innovative learning tools that have revolutionized how teachers teach and learners learn. 170M+ use Google for Education around the world. Google Classroom is the most used Learning Management System (LMS) by Educational Institutions around the world. <br>
                 <span class="fw-bold">Benefits of Becoming a Google for Education Partner School</span>
-                <ul>
-                    <li>81% of students feel that Google Workspace for Education tools improve their grades and efficiency.</li>
-                    <li>82% of students confirmed that Chromebook devices allow them to spend more time studying through increased accessibility</li>
-                    <li>99% of schools confirmed cost reduction in learning content delivered to their students</li>
-                    <li>90% reduction in the cost of digital infrastructure and operation</li>
-                    <li>40% more enrollment in schools with Google Workspace for Education</li>
-                    Become a Google for Education School today and Benefit from Up to $5Million USD investment.
-                </ul>
+                <div class="book-list w-100">
+
+                    <ul class="book-list text-start i-green">
+                        <li>81% of students feel that Google Workspace for Education tools improve their grades and efficiency.</li>
+                        <li>82% of students confirmed that Chromebook devices allow them to spend more time studying through increased accessibility</li>
+                        <li>99% of schools confirmed cost reduction in learning content delivered to their students</li>
+                        <li>90% reduction in the cost of digital infrastructure and operation</li>
+                        <li>40% more enrollment in schools with Google Workspace for Education</li>
+                    </ul>
+                </div>
+                <span>Become a Google for Education School today and Benefit from Up to $5Million USD investment.</span>
+
             </p>
             <a href="ngn-edu-iwn.html" class="btn btn-warning py-2 px-5 fw-bold">LEARN MORE</a>
         </div>
@@ -465,6 +776,12 @@
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    <!-- Owl Carousel -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js'></script>
+    <!-- <script  src="assets/custom/js/carousel.js"></script> -->
+
     <!-- Initialization for testimonial slider -->
     <!-- <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -481,6 +798,31 @@
         });
     </script> -->
     <script>
+        $(document).ready(function() {
+            $('.owl-carousel').owlCarousel({
+                loop:true,
+                margin:10,
+                nav:true,
+                mouseDrag:false,
+                autoplay: true,
+                animateOut: 'fadeOut',
+                animateIn: 'fadeIn',
+                rewind: true,
+                items:1,
+                // responsive:{
+                //     0:{
+                //         items:1
+                //     },
+                //     600:{
+                //         items:1
+                //     },
+                //     1000:{
+                //         items:1
+                //     }
+                // }
+            });
+        });
+
         document.addEventListener("DOMContentLoaded", function() {
             var testimonialSlider = new Swiper('.testimonial-slider', {
                 spaceBetween: 30,
